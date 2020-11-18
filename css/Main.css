@@ -1,9 +1,10 @@
 body {
     background-color: #f8f8f8;
+    Width: 100%;
+    max-width: 320px;
 }
 #Rectangle-logo {
-    Width: 304px;
-    Height: 64px;
+    min-height: 64px;
     background-color: #FFFFFF;
     margin-bottom: 6px;
     margin-left: 9px;
@@ -38,12 +39,11 @@ body {
 .Menu-component {
     font-size: 12px;
     color: red; 
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 18px;
+    margin-right: 18px;
 }
 #About {
     text-align: center;
-    Width: 304px;
     Height: 216px;
     background-color: #FFFFFF;
     margin-left: 8px;
@@ -52,15 +52,15 @@ body {
 }
 .Title {
     text-align: Left;
-    margin-top: 8px;
     margin-left: 8px;
+    margin-bottom: 7.8px;
+    margin-top: 16.2px;
     font-size: 12px;
     color: #7F7F7F; 
     font-family: SFUIDisplay;
 }
 #Service {
     text-align: center;
-    Width: 304px;
 }
 .Radio {
     color: red;
@@ -89,4 +89,174 @@ body {
     font-size: 7px;
     color: red; 
     text-align: right;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 20px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    top: 1px;
+    background-color: white;
+  }
+  
+  input:checked + .slider {
+    background-color:#BE1E24;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+  .slider.round {
+    border-radius: 28px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .small-text {
+    font-family: SFUIDisplay;
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #7F7F7F;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+
+  }
+  .class-div {
+    background-color: white;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .class-label {
+    font-family: SF Pro Display;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .class-input {
+    font-family: SF Pro Display;
+    font-size: 17px;
+    line-height: 20px;
+    color: #037AFF;
+    outline: none;
+    border:none;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .class-input::-moz-placeholder {
+    font-family: SF Pro Display;
+    font-size: 17px;
+    line-height: 20px;
+    color: #D6D6D6;
+  }
+  .color-text {
+      color:red;
+  }
+  .class-button {
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  hr {
+    margin-left: 8px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+  }
+  .btn.btn-primary[disabled] {
+    background-color: #D6D6D6;
+    outline: none;
+    border:none;
+}
+#prize {
+  color: #7F7F7F;
+}
+.class-label-2 {
+  font-family: SF Pro Display;
+  font-size: 17px;
+  line-height: 20px;
+  color: #7F7F7F;
+  outline: none;
+  border:none;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  display: block;
+}
+.color-class-text {
+  color: black;
+}
+.box-shadow {
+  margin-left: 8px;
+  margin-right: 8px;
+  display: flex;
+  background: #EBEBEB;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+}
+.image-button {
+  margin-top: 7px;
+  margin-left: 25%;
+  width: 46px;
+  height: 36px;
+}
+.test-class {
+  justify-content: center;
+  align-items: center;
+}
+#link-label {
+  font-family: SF Pro Display;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-left:7px;
+}
+#image-arrow {
+  display: inline;
+  float:right;
+  margin-top: 16px;
+  margin-right: 5px;
+}
+.class-label-3 {
+  font-family: SFUIDisplay;
+  font-size: 12px;
+  line-height: 8px;
+  color: #7F7F7F;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 3px;
 }

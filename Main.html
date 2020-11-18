@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Main.css">
+    <script defer src="js/Main.js"></script>
 
   </head>
   <body> 
@@ -20,9 +21,6 @@
       <a class="Menu-component" href="">Settings</a>
       <a class="Menu-component" href="">Admin</a>
     </div>
-    <div id="info">
-
-    </div>
     <div id="Service">
       <p class="Title">Info & adv</p>
       <div id="About" class="lead text-center align-items-center">
@@ -33,23 +31,22 @@
     </div>
     <div id="Insurance">
       <p class="Title">СЕРВИСЫ ПРЕДПРИЯТИЯ</p>
-      <div class="ins-content">
+      <form id="Main-Form" class="ins-content" action="Register.html">
         
-        <div class="insurance">
-            <a href="test1.html">
-            <img class="image img-fluid" src="image/First.png">
+        <div class="insurance" id="First">
+            <img class="image img-fluid" name="First" src="image/First.png">
             <div class="first-text">Страховка от укуса клеща</div>
             <div class="second-text">Платежи</div>
-          </a>
+          
         </div>
-        <div class="insurance">
-          <a href="test1.html">
-            <img class="image img-fluid" src="image/Second.png">
-            <div class="first-text">Страховка от несчастных случаев</div>
-            <div class="second-text">Платежи</div>
-          </a>
+        <div class="insurance" id="Second">
+            <img class="image img-fluid" name="Second" src="image/Second.png">
+            <div>
+              <div class="first-text">Страховка от несчастных случаев</div>
+              <div class="second-text">Платежи</div>
+            </div>
         </div>
-        
+        <input type="hidden" name="Type" id="Type">
       </div>
     </div>
     <div id="map">

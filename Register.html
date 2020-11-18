@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Магнитка 'Астра-металл'</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Main.css">
+    <script defer src="js/jquery-3.5.1.min.js"></script>
+    <script defer src="js/Registration.js"></script>
+
+  </head>
+  <body onload="start()"> 
+    <div id="Rectangle-logo">
+      <img id="Image-logo" src="image/logo.png">
+      <div id="Main-text">Астра-Металл</div>
+      <div id="Other-text">Страховые услуги</div>
+    </div>
+    <form action="Info.html" id="info-button" class="class-div">
+        <label id="link-label">Условия страховки</label>
+        <img id="image-arrow" src="image/Arrow.png">
+        <input type="hidden" name="Type" id="Type2">
+    </form>
+    <form action="Final.html">
+        <div id="text-1" class="small-text">
+            Введите данные для страхового полиса и оплатите счет. Страховой полис будет отправлен на указанный вами адрес электронной почты. 
+        </div>
+        <div id="div-1" class="class-div">
+            <label class="class-label">eMail <span class="color-text">*</span></label>
+            <input type="email" placeholder="Не определено" id="mail" name="mail" class="class-input" onBlur="disabledButton()"><hr>
+            <label class="class-label">Начало действия полиса <span class="color-text">*</span></label>
+            <input type="date" id="first-date" name="first-date" class="class-input" onBlur="disabledButton()">
+        </div>
+        <div class="Title">СТРАХУЕМЫЙ</div>
+        <div id="div-2" class="class-div">
+            <label class="class-label">Фамилия <span class="color-text">*</span></label>
+            <input type="text" placeholder="Не определено" class="class-input" id="main-surname" name="main-surname" onBlur="disabledButton()"><hr>
+            <label class="class-label">Имя <span class="color-text">*</span></label>
+            <input type="text" placeholder="Не определено" class="class-input" id="main-name" name="main-name" onBlur="disabledButton()"><hr>
+            <label class="class-label" >Отчество </label>
+            <input type="text" placeholder="(опционально)" class="class-input" id="main-patron" name="main-patron"><hr>
+            <label class="class-label">Дата рождения <span class="color-text">*</span></label>
+            <input type="date" placeholder="Не определено" class="class-input" id="main-birthday" name="main-birthday" onBlur="disabledButton()">
+        </div>  
+        <div class="Title">АДРЕС ПРОПИСКИ</div>
+        <div id="div-3" class="class-div">
+            <label class="class-label">Область / Республика <span class="color-text">*</span></label>
+            <input type="text" placeholder="Не определено" class="class-input" id="Region" name="Region" onBlur="disabledButton()"><hr>
+            <label class="class-label">Район </label>
+            <input type="text" placeholder="(опционально)" class="class-input" id="District" name="District"><hr>
+            <label class="class-label">Населенный пункт <span class="color-text">*</span></label>
+            <input type="text" placeholder="Не определено" class="class-input" id="City" name="City" onBlur="disabledButton()"><hr>
+            <label class="class-label">Улица, дом, квартира <span class="color-text">*</span></label>
+            <input type="text" placeholder="Не определено" class="class-input" id="House" name="House" onBlur="disabledButton()">
+        </div>
+        <div id="div-4" class="class-div">
+            <span class="class-label">Является страхователем</span>
+            <span class="class-input" id="Flag">Нет</span>
+            <label class="switch">
+                <input type="checkbox" id="CheckBox" checked name="CheckBox" onBlur="disabledButton()">
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <div id="div-5" class="class-div">
+            <div class="Title">СТРАХОВАТЕЛЬ</div>
+            <div>
+                <label class="class-label">Фамилия <span class="color-text">*</span></label>
+                <input type="text" placeholder="Не определено" class="class-input" id="other-surname" name="other-surname" onBlur="disabledButton()"><hr>
+                <label class="class-label">Имя <span class="color-text">*</span></label>
+                <input type="text" placeholder="Не определено" class="class-input" id="other-name" name="other-name" onBlur="disabledButton()"><hr>
+                <label class="class-label" >Отчество </label>
+                <input type="text" placeholder="(опционально)" class="class-input" id="other-patron" name="other-patron"><hr>
+                <label class="class-label">Дата рождения <span class="color-text">*</span></label>
+                <input type="date" placeholder="Не определено" class="class-input" id="other-birthday" name="other-birthday" onBlur="disabledButton()">
+            </div>
+        </div>
+
+        <div id="div-6" class="class-div">
+            <label class="class-label">Страховая сумма</label>
+            <select id="price" name="price"></select><hr>
+            <label class="class-label">Страховая премия</label>
+            <input class="class-input" id="prize" name="prize"></label>
+
+        </div>
+        <div id="text-2" class="small-text">
+            нажатие ГОТОВО будет означать Ваше согласие на обработку персональных данных
+            
+        </div>
+        <input type="hidden" name="Type" id="Type">
+        <div id="div-7" class="class-div">
+            <input type="submit" class="btn btn-primary class-button" id="main-button" value="Готово" disabled>
+        </div>
+    </form>
+
+  </body>
+</html>
