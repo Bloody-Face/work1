@@ -9,38 +9,40 @@ body {
     margin-bottom: 6px;
     margin-left: 9px;
     margin-right: 7px;
+    position: relative; 
 }
 #Image-logo {
     position: absolute;
     Width: 52px;
     Height: 52px;
-    margin-top: 6px;
-    margin-left: 8px;
-    margin-bottom: 6px;
-    margin-right: 8px;
+    top: 9.375%;
+    left: 2.631%;
+
 }
 #Main-text {
     font-family: SF Pro Display;
     font-size: 14px;
     position: absolute;
-    margin-top: 14px;
-    margin-left: 68px;
-    margin-bottom: 30px;
+    top: 23%;
+    left: 22.5%;
 }
 #Other-text {
     position: absolute;
     font-family: SF Pro Display;
     font-size: 12px;
-    margin-top: 34px;
-    margin-left: 68px;
-    margin-bottom: 14px;
+    top: 53%;
+    left: 22.5%;
+
     color: #7F7F7F;
 }
+.Menu-component-label {
+  font-size: 12px;
+  color: red; 
+  margin-left: 6px;
+  margin-right: 6px;
+}
 .Menu-component {
-    font-size: 12px;
-    color: red; 
-    margin-left: 18px;
-    margin-right: 18px;
+    display: none;
 }
 #About {
     text-align: center;
@@ -76,19 +78,25 @@ body {
 }
 .first-text {
     font-family: SFUIDisplay;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    text-align: right;
     font-size: 10px;
+    line-height: 12px;
+
     color: black; 
     text-align: right;
+
+    position: absolute;
+    right: 4%;
+    bottom: 10.14%;
+
 }
 .second-text {
     font-family: SFUIDisplay;
     font-size: 7px;
     color: red; 
-    text-align: right;
+
+    position: absolute;
+    right: 4%;
+    bottom: 2.7%;
 }
 
 .switch {
@@ -156,6 +164,7 @@ body {
     background-color: white;
     margin-left: 8px;
     margin-right: 8px;
+    
   }
   .class-label {
     font-family: SF Pro Display;
@@ -254,9 +263,11 @@ body {
 .class-label-3 {
   font-family: SFUIDisplay;
   font-size: 12px;
-  line-height: 8px;
+  line-height: 16px;
   color: #7F7F7F;
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 3px;
 }
+
+

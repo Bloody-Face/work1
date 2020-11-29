@@ -1,5 +1,6 @@
 document.getElementById("CheckBox").addEventListener('click', hidden);
 
+
 function start() {
     hidden();
     checkVar();

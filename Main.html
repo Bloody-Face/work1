@@ -6,20 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Main.css">
+    <script defer src="js/jquery-3.5.1.min.js"></script>
     <script defer src="js/Main.js"></script>
 
   </head>
-  <body> 
+  <body onload="Carousel('General')"> 
     <div id="Rectangle-logo">
-      <img id="Image-logo" src="image/logo.png">
+      <img id="Image-logo" class="image img-fluid" src="image/logo.png">
       <div id="Main-text">Астра-Металл</div>
       <div id="Other-text">Страховые услуги</div>
     </div>
-    <div id="Menu">
-      <a class="Menu-component" href="Main.html">General</a>
-      <a class="Menu-component" href="">Details</a>
-      <a class="Menu-component" href="">Settings</a>
-      <a class="Menu-component" href="">Admin</a>
+    <div id="Menu" data-toggle="buttons">
+      <label class="btn active Menu-component-label">
+        <input class="Menu-component radio-ivent" type="radio" name="options" id="option1" autocomplete="off" checked value="General"> General
+      </label>
+      <label class="btn Menu-component-label">
+        <input  class="Menu-component radio-ivent" type="radio" name="options" id="option2" autocomplete="off" value="Details"> Details
+      </label>
+      <label class="btn Menu-component-label">
+        <input class="Menu-component radio-ivent" type="radio" name="options" id="option3" autocomplete="off" value="Settings"> Settings
+      </label>
+      <label class="btn Menu-component-label">
+        <input class="Menu-component radio-ivent" type="radio" name="options" id="option4" autocomplete="off" value="Admin"> Admin
+      </label>
     </div>
     <div id="Service">
       <p class="Title">Info & adv</p>
@@ -52,6 +61,21 @@
     <div id="map">
       <p class="Title">MAP</p>
       <img src="image/Map.png">
+    </div>
+    <div id="Text-1">
+      <div class="class-label-3"> 
+        <strong>Текстик</strong> <br>
+      </div>
+    </div>
+    <div id="Text-2">
+      <div class="class-label-3"> 
+        <strong>Второй текстик</strong> <br>
+      </div>
+    </div>
+    <div id="Text-3">
+      <div class="class-label-3"> 
+        <strong>Третий текстик</strong> <br>
+      </div>
     </div>
   </body>
 </html>
