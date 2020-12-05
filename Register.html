@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Main.css">
-    <script defer src="js/jquery-3.5.1.min.js"></script>
-    <script defer src="js/Registration.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css">
 
+    <script defer src="js/Registration.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
   </head>
   <body onload="start()"> 
     <div id="Rectangle-logo">
@@ -29,7 +31,9 @@
             <label class="class-label">eMail <span class="color-text">*</span></label>
             <input type="email" placeholder="Не определено" id="mail" name="mail" class="class-input" onBlur="disabledButton()"><hr>
             <label class="class-label">Начало действия полиса <span class="color-text">*</span></label>
-            <input type="date" id="first-date" name="first-date" class="class-input class-date" onBlur="disabledButton()">
+            <div class="div-date">
+                <input type="text" placeholder="Не определено" id="div-date-1" class="class-date class-input" onBlur="disabledButton()" disabled>
+            </div>
         </div>
         <div class="Title">СТРАХУЕМЫЙ</div>
         <div id="div-2" class="class-div">
@@ -40,7 +44,9 @@
             <label class="class-label" >Отчество </label>
             <input type="text" placeholder="(опционально)" class="class-input" id="main-patron" name="main-patron"><hr>
             <label class="class-label">Дата рождения <span class="color-text">*</span></label>
-            <input type="date" placeholder="Не определено" class="class-input" id="main-birthday" name="main-birthday" onBlur="disabledButton()">
+            <div class="div-date">
+                <input type="text" placeholder="Не определено" id="div-date-2" class="class-date class-input" onBlur="disabledButton()" disabled>
+            </div>
         </div>  
         <div class="Title">АДРЕС ПРОПИСКИ</div>
         <div id="div-3" class="class-div">
@@ -71,7 +77,10 @@
                 <label class="class-label" >Отчество </label>
                 <input type="text" placeholder="(опционально)" class="class-input" id="other-patron" name="other-patron"><hr>
                 <label class="class-label">Дата рождения <span class="color-text">*</span></label>
-                <input type="date" placeholder="Не определено" class="class-input" id="other-birthday" name="other-birthday" onBlur="disabledButton()">
+                
+                <div class="div-date">
+                    <input type="text" id="div-date-3" placeholder="Не определено" class="class-date class-input" disabled>
+                </div>
             </div>
         </div>
 
@@ -79,7 +88,7 @@
             <label class="class-label">Страховая сумма</label>
             <select id="price" name="price"></select><hr>
             <label class="class-label">Страховая премия</label>
-            <input class="class-input" id="prize" name="prize" disabled></label>
+            <input disabled class="class-input" id="prize" name="prize" >
 
         </div>
         <div id="text-2" class="small-text">
@@ -87,8 +96,11 @@
             
         </div>
         <input type="hidden" name="Type" id="Type">
+        <input type="hidden" name="first-date" id="first-date">
+        <input type="hidden" name="main-birthday" id="main-birthday">
+        <input type="hidden" name="other-birthday" id="other-birthday">
         <div id="div-7" class="class-div">
-            <input type="submit" class="btn btn-primary class-button" id="main-button" value="Готово" disabled>
+            <input type="submit" class="btn btn-primary class-button" id="main-button" value="Готово">
         </div>
     </form>
 

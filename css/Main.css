@@ -270,4 +270,14 @@ body {
   margin-bottom: 3px;
 }
 
+.ui-datepicker-trigger {
+	
+	position: absolute;
+  bottom: 80%;
+  right: 11px;
+	cursor: pointer;
+}
+.div-date {
+  position: relative; 
+}
 

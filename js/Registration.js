@@ -25,7 +25,7 @@ function checkVar() {
         objSel.options[0] = new Option("100 000 ₽", "300 ₽");
         objSel.options[1] = new Option("100 000 ₽", "250 ₽");
         objSel.options[2] = new Option("300 000 ₽", "650 ₽");
-        document.getElementById("prize").textContent="300 ₽";
+        //document.getElementById("prize").textContent="300 ₽";
         document.getElementById("prize").value="300 ₽";
     }
 }
@@ -93,3 +93,44 @@ function info() {
     document.getElementById("Type2").value=document.getElementById("Type").value;
     document.forms["info-button"].submit();
 }
+
+$.datepicker.regional['ru'] = {
+    closeText: 'Закрыть',
+    prevText: 'Предыдущий',
+    nextText: 'Следующий',
+    currentText: 'Сегодня',
+    monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+    monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+    dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+    dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+    dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+    weekHeader: 'Не',
+    dateFormat: 'dd MM yy',
+    firstDay: 1,
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+
+};
+$.datepicker.setDefaults($.datepicker.regional['ru']);
+$(function(){
+    $(".class-date").datepicker({
+        showOn: "button",
+		buttonImage: 'image/Mask.png',
+        buttonImageOnly: true,
+        onSelect: function(date, datepicker) {
+            if (datepicker.id === "div-date-1") {
+                document.getElementById("first-date").value = date;
+            }  else             
+            if (datepicker.id ==="div-date-2") {
+                document.getElementById("main-birthday").value = date;
+            } else             
+            if (datepicker.id === "div-date-3") {
+                document.getElementById("other-birthday").value = date;
+            }     
+            disabledButton();              
+        }
+    })
+    
+});
+$(".class-date:disabled, #prize:disabled").css('background-color', 'white');

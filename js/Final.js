@@ -10,14 +10,19 @@ function getUrlParameter(sParam) {
         }
     }
 }
+function replaceAll(string, search, replace) {
+    return string.split(search).join(replace);
+  }
 
 function start() {
     var mail = getUrlParameter("mail");
     var startDate = getUrlParameter("first-date");
+    startDate = replaceAll(startDate, "+", " ");
     var mainSurname = getUrlParameter("main-surname");
     var mainName = getUrlParameter("main-name");
     var mainPatron = getUrlParameter("main-patron");
     var mainBirthDay = getUrlParameter("main-birthday");
+    mainBirthDay = replaceAll(mainBirthDay, "+", " ");
 
     var region = getUrlParameter("Region");
     var district = getUrlParameter("District");
@@ -28,8 +33,10 @@ function start() {
     var otherName = getUrlParameter("other-name");
     var otherPatron = getUrlParameter("other-patron");
     var otherBirthDay = getUrlParameter("other-birthday");
+    otherBirthDay = replaceAll(otherBirthDay, "+", " ");
+
     var flag = getUrlParameter("CheckBox");
-    var prize = getUrlParameter("prize");
+    var prize = getUrlParameter("price");
 
     document.getElementById("mail").textContent = mail;
     document.getElementById("first-date").textContent = startDate;
@@ -48,7 +55,8 @@ function start() {
         document.getElementById("other-name").textContent = otherSurname+" "+otherName+" "+otherPatron;
         document.getElementById("other-birthday").textContent = otherBirthDay;
     }
-    price = prize.split('+')
+    
+    price = prize.split('+');
     document.getElementById("prise").textContent = price[0]+".00";
     document.getElementById("Discount").textContent = "0.00";
     document.getElementById("Total").textContent = price[0]+".00";
