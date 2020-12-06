@@ -13,8 +13,8 @@ body {
 }
 #Image-logo {
     position: absolute;
-    Width: 52px;
-    Height: 52px;
+    max-Width: 52px;
+    max-Height: 52px;
     top: 9.375%;
     left: 2.631%;
 
@@ -57,6 +57,7 @@ body {
     margin-left: 8px;
     margin-bottom: 7.8px;
     margin-top: 16.2px;
+    margin-right: 30px;
     font-size: 12px;
     color: #7F7F7F; 
     font-family: SFUIDisplay;
@@ -285,7 +286,7 @@ body {
 }
 .img-button {
   position: absolute;
-  right: 11px;
+  right: 8px;
   top: 0px;
 }
 
