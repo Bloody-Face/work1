@@ -18,7 +18,7 @@ $(document).on('click', '.radio-ivent', function() {
 
 function Carousel(value) {
 
-    console.log(value);
+    //console.log(value);
     if(value==="General") {
         $('#Service').show();	
         $('#Insurance').show();	
@@ -52,3 +52,16 @@ function Carousel(value) {
             $('#Text-3').show();	
         }
 }
+$('.img-button').on('click', function() {
+    var MainId = this.id;
+    var id = $(this).parent().attr("id")+"Flag";
+    //console.log(id+"    "+$('#'+id).css('display'));
+    if($('#'+id).css('display') === 'block'){
+        $('#'+MainId).attr('src', 'image/Mask-2.png')
+        $('#'+id).hide();
+    } else {
+        $('#'+MainId).attr('src', 'image/Mask-1.png')
+        $('#'+id).show();
+    }
+  });
+

@@ -23,8 +23,7 @@ function checkVar() {
     else {
         document.getElementById("Other-text").textContent = "Страховка от несчатсного случая";
         objSel.options[0] = new Option("100 000 ₽", "300 ₽");
-        objSel.options[1] = new Option("100 000 ₽", "250 ₽");
-        objSel.options[2] = new Option("300 000 ₽", "650 ₽");
+        objSel.options[1] = new Option("300 000 ₽", "650 ₽");
         //document.getElementById("prize").textContent="300 ₽";
         document.getElementById("prize").value="300 ₽";
     }
@@ -55,9 +54,8 @@ function disabledButton() {
         document.getElementById("City").value !== "" &&
         document.getElementById("House").value !== ""
     ) {
-        console.log(document.getElementById("CheckBox").checked);
+        //console.log(document.getElementById("CheckBox").checked);
         if(document.getElementById("CheckBox").checked === true) {
-            console.log("HELP");
             document.getElementById("main-button").disabled = false;
         }
         else 
@@ -134,3 +132,32 @@ $(function(){
     
 });
 $(".class-date:disabled, #prize:disabled").css('background-color', 'white');
+
+$('.class-check-input-text-1').keyup(this, function(key){
+    var text = new RegExp("^[A-zА-яЁё]+$"); 
+    //console.log(key.key);
+    if(!text.test(key.key)) {
+       
+        var Value = $('#'+this.id+'').val();
+        var shortenedString = Value.substr(0,(Value.length -1));
+        $('#'+this.id+'').val(shortenedString);
+    }
+
+  });
+  $('.class-check-input-text-2').keyup(this, function(key){
+    var text = new RegExp("^[A-zА-яЁё, ]+$"); 
+    //console.log(key.key);
+    if(!text.test(key.key)) {
+       
+        var Value = $('#'+this.id+'').val();
+        var shortenedString = Value.substr(0,(Value.length -1));
+        $('#'+this.id+'').val(shortenedString);
+    }
+
+  });
+$('#price').change(function(){
+    if($(this).val() == 0) return false;
+    
+    //console.log($(this).val());
+    $('#prize').val($(this).val());
+});

@@ -38,8 +38,8 @@ body {
 .Menu-component-label {
   font-size: 12px;
   color: red; 
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .Menu-component {
     display: none;
@@ -279,5 +279,13 @@ body {
 }
 .div-date {
   position: relative; 
+}
+.div-button {
+  position: relative; 
+}
+.img-button {
+  position: absolute;
+  right: 11px;
+  top: 0px;
 }
 

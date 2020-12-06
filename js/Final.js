@@ -61,6 +61,7 @@ function start() {
     document.getElementById("Discount").textContent = "0.00";
     document.getElementById("Total").textContent = price[0]+".00";
     checkVar();
+    $('#Other-scoreFlag').hide();
 }
 function checkVar() {
     var way = getUrlParameter("Type");
@@ -71,3 +72,16 @@ function checkVar() {
         document.getElementById("Other-text").textContent = "Страховка от несчатсного случая";
     }
 }
+
+$('.img-button').on('click', function() {
+    var MainId = this.id;
+    var id = $(this).parent().attr("id")+"Flag";
+    //console.log(id+"    "+$('#'+id).css('display'));
+    if($('#'+id).css('display') === 'block'){
+        $('#'+MainId).attr('src', 'image/Mask-2.png')
+        $('#'+id).hide();
+    } else {
+        $('#'+MainId).attr('src', 'image/Mask-1.png')
+        $('#'+id).show();
+    }
+  });
